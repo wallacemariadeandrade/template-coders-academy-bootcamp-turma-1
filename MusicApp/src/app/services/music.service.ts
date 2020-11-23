@@ -18,4 +18,8 @@ export class MusicService {
   public getAlbuns():Observable<Album[]> {
     return this.http.get<Album[]>(`${environment.baseUrl}/album`);
   }
+
+  public getAlbumDetail(id:String): Observable<Album> {
+    return this.http.get<Album>(`${environment.baseUrl}/album/${id}`);
+  }
 }
