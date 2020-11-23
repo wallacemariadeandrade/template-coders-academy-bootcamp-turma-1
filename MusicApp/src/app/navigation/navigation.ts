@@ -12,6 +12,18 @@ export const navigation: FuseNavigation[] = [
             type: "item",
             icon: "keyboard_arrow_right",
             url: "/music"
+        },{
+            id: "favorite",
+            title: "Músicas Favoritas",
+            type: "item",
+            icon: "keyboard_arrow_right",
+            url: "/favorite-music"
+        },{
+            id: "signIn",
+            title: "Logar",
+            type: "item",
+            icon: "keyboard_arrow_right",
+            url: "/auth/login"
         }],
     },
 ];
