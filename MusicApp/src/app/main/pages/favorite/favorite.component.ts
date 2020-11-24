@@ -23,12 +23,16 @@ export class FavoriteComponent implements OnInit {
     ];
     dataSource: any[];
 
-    constructor(private persistedState:PersistedStateService) {
+    constructor(private persistedState:PersistedStateService, private router:Router) {
 
     }
 
     ngOnInit() {
         this.user = this.persistedState.get(this.persistedState.LOGGED_IN);
         this.dataSource = this.user.favoriteMusics as any;
+    }
+
+    goToDetail(albumId) {
+        this.router.navigate(["music", albumId]);
     }
 }

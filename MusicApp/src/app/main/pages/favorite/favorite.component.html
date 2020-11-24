@@ -39,7 +39,7 @@
               <mat-icon class="secondary-text">more_vert</mat-icon>
             </button>
             <mat-menu #moreMenu="matMenu">
-              <button mat-menu-item aria-label="detail">
+              <button mat-menu-item aria-label="detail" (click)="goToDetail(element.albumId)">
                 <mat-icon>visibility</mat-icon>
                 <span>Ver Album</span>
               </button>
