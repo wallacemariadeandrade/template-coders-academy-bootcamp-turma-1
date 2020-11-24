@@ -1,6 +1,6 @@
 # Bootcamp Coders Academy - Front End Angular 2
 
-Aplicação front end construída durante o bootcamp Coders Academy.
+Aplicação front end construída durante o bootcamp Coders Academy. O back end está disponível [aqui](https://github.com/wallacemariadeandrade/coders-academy-bootcamp-turma-1)
 
 ## Tecnologias e frameworks abordados
 
