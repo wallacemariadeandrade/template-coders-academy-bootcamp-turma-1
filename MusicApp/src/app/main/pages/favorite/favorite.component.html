@@ -44,7 +44,7 @@
                 <span>Ver Album</span>
               </button>
               <mat-divider></mat-divider>
-              <button mat-menu-item aria-label="remove">
+              <button mat-menu-item aria-label="remove" (click)="removeFromFavorite(element.musicId)">
                 <mat-icon>delete</mat-icon>
                 <span>Remover dos Favoritos</span>
               </button>
