@@ -24,4 +24,21 @@ export class UserService {
   public removeFromFavorite(id:string, musicId:string):Observable<any>  {
     return this.http.delete(`${environment.baseUrl}/User/${id}/favorite-music/${musicId}`);
   }
+
+  /**
+   * addToFavorite
+   * A API não retorna dados nesse caso, então o retorno do método foi
+   * declarado como any (qualquer coisa); também não recebe dados, por isso
+   * foi passado null no segundo argumento
+   */
+  public addToFavorite(id:string, musicId:string):Observable<any> {
+    return this.http.post(`${environment.baseUrl}/User/${id}/favorite-music/${musicId}`, null);
+  }
+
+  /**
+   * getUser
+   */
+  public getUser(id):Observable<User> {
+    return this.http.get<User>(`${environment.baseUrl}/User/${id}`);
+  }
 }
