@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import User from 'app/model/user';
+import { PersistedStateService } from 'app/services/persisted-state.service';
 import Swal from "sweetalert2";
 
 @Component({
@@ -8,10 +10,12 @@ import Swal from "sweetalert2";
     styleUrls: ["./favorite.component.scss"],
 })
 export class FavoriteComponent implements OnInit {
+    
+    user: User;
+    
     displayedColumns: string[] = [
         "position",
         "name",
-        "duration",
         "band",
         "avatar",
         "album",
@@ -19,7 +23,12 @@ export class FavoriteComponent implements OnInit {
     ];
     dataSource: any[];
 
-    constructor() {}
+    constructor(private persistedState:PersistedStateService) {
 
-    ngOnInit() {}
+    }
+
+    ngOnInit() {
+        this.user = this.persistedState.get(this.persistedState.LOGGED_IN);
+        this.dataSource = this.user.favoriteMusics as any;
+    }
 }
