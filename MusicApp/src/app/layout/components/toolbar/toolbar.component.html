@@ -8,7 +8,7 @@
             <div class="toolbar-separator" *ngIf="!hiddenNavbar && !rightNavbar" fxHide.gt-md></div>
         </div>
         <div class="" fxFlex="0 1 auto" fxLayout="row" fxLayoutAlign="start center">
-            <button mat-button [matMenuTriggerFor]="userMenu" class="user-button">
+            <button mat-button [matMenuTriggerFor]="userMenu" class="user-button" *ngIf="user">
                 <div fxLayout="row" fxLayoutAlign="center center">
                     <img class="avatar mr-0 mr-sm-16" src="{{user.photo}}">
                     <span class="username mr-12" fxHide fxShow.gt-sm>{{user.name}}</span>

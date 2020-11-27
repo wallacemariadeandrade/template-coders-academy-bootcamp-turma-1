@@ -10,6 +10,7 @@ import { FuseSplashScreenService } from "@fuse/services/splash-screen.service";
 
 import { navigation } from "app/navigation/navigation";
 import { Router } from "@angular/router";
+import { PersistedStateService } from './services/persisted-state.service';
 
 @Component({
     selector: "app",
@@ -29,7 +30,8 @@ export class AppComponent implements OnInit, OnDestroy {
         private _fuseNavigationService: FuseNavigationService,
         private _fuseSidebarService: FuseSidebarService,
         private _fuseSplashScreenService: FuseSplashScreenService,
-        private _router: Router
+        private _router: Router,
+        private _persistedStateService:PersistedStateService,
     ) {
         // Get default navigation
         this.navigation = navigation;
@@ -42,6 +44,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
         // Set the private defaults
         this._unsubscribeAll = new Subject();
+
+        // Redireciona para a página de login caso o usuário
+        // não esteja autenticado
+        var user = this._persistedStateService.get(this._persistedStateService.LOGGED_IN);
+        if(!user || user == undefined) {
+            this._router.navigate(["auth", "login"]);
+        }
     }
 
     // -----------------------------------------------------------------------------------------------------
