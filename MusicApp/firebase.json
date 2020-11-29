@@ -1,8 +1,8 @@
 {
   "hosting": {
-    "public": "MusicApp/dist",
+    "public": "dist",
     "ignore": [
-      "MusicApp/firebase.json",
+      "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
