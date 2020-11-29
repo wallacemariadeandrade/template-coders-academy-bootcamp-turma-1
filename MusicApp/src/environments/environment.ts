@@ -5,7 +5,7 @@
 export const environment = {
     production: false,
     hmr: false,
-    baseUrl: "https://localhost:5001/api"
+    baseUrl: "https://codersacademybackend.herokuapp.com/api"
 };
 
 /*
