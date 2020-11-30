@@ -2,6 +2,8 @@
 
 Aplicação front end construída durante o bootcamp Coders Academy. O back end está disponível [aqui](https://github.com/wallacemariadeandrade/coders-academy-bootcamp-turma-1)
 
+O frontend está publicado no Firebase e disponível [aqui](https://codersacademyangularfrontend.web.app/).
+
 ## Tecnologias e frameworks abordados
 
 - :white_check_mark:Angular 2
