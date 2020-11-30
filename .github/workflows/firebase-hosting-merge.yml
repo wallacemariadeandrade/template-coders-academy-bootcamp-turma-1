@@ -18,7 +18,7 @@ jobs:
           node-version: '14.x'
       - run: npm install
         working-directory: ${{env.working-directory}}
-      - run: npm install -g angular@cli
+      - run: npm install -g @angular/cli
         working-directory: ${{env.working-directory}}
         - run: ng build --prod
         working-directory: ${{env.working-directory}}
