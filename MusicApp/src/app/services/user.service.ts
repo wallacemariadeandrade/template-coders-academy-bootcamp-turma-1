@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import RegisterUser from 'app/model/registerUser';
 import SignIn from 'app/model/signIn';
 import { User } from 'assets/angular-material-examples/autocomplete-display/autocomplete-display-example';
 import { environment } from "environments/environment";
@@ -40,5 +41,9 @@ export class UserService {
    */
   public getUser(id):Observable<User> {
     return this.http.get<User>(`${environment.baseUrl}/User/${id}`);
+  }
+
+  public registerUser(user: RegisterUser):Observable<RegisterUser> {
+    return this.http.post<RegisterUser>(`${environment.baseUrl}/User/Register`, user);
   }
 }
