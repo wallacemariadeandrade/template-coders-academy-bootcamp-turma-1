@@ -18,7 +18,7 @@ jobs:
           node-version: '14.x'
       - run: npm install
         working-directory: ${{env.working-directory}}
-      - run: npm run build:prod
+      - run: npm run build-prod
         working-directory: ${{env.working-directory}}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -29,4 +29,3 @@ jobs:
           projectId: codersacademyangularfrontend
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
-          
