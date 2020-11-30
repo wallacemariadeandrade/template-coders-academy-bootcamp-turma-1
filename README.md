@@ -8,3 +8,8 @@ Aplicação front end construída durante o bootcamp Coders Academy. O back end 
 - :white_check_mark:[Angular Material Design](https://material.angular.io/)
 - :white_check_mark:[Fuse theme](http://angular-material.fusetheme.com/apps/dashboards/analytics)
 - :white_check_mark:Deploy no Azure
+
+## Melhorias pessoais
+
+- :white_check_mark:Deploy automatizado no [Firebase](https://firebase.google.com/?hl=pt-br) com GitHub Actions
+- :white_check_mark:Implementado registro de usuário
